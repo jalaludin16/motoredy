@@ -1,0 +1,34 @@
+<table class="table table-sm table-bordered">
+    <thead class="">
+        <tr>
+            <th> Gerbang </th>
+            <th> Tanggal </th>
+            <th> Group Masalah </th>
+            <th> Deskripsi </th>
+            <th> Prioritas </th>
+            <th> Request Time </th>
+            <th> Respon Time </th>
+            <th> Solved Time </th>
+            <th> User </th>
+            <th> Jabatan </th>
+            
+        </tr>
+
+    <% @problems.each do |p| %>
+    <tr>
+        <td><%= p.user.gerbang.nama_gerbang %> </td>
+        <td><%= p.created_at.strftime("%d-%b-%Y") %> </td>  
+        <td><%= p.categori.categori_name %> </td> 
+        <td><%= p.deskripsi %> </td>
+        <td><%= p.priority.prioritas %> </td>
+        <td><%= p.created_at.strftime("%I:%M:%S") %>
+        <td><%= p.created_at.strftime("%T") %>
+        <td><%= p.created_at.strftime("%T") %>
+        <td><%= p.user.name %> </td>
+        <td><%= p.user.jabatan.nama_jabatan %> </td>
+    </tr>
+    <% end %>
+    
+</table>
+
+<%= will_paginate @problems, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

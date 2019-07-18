@@ -1,0 +1,22 @@
+<table class= 'table table-sm table-border'>
+    <tr>
+        <td> Nama User </td>
+        <td> NDK </td>
+        <td> Email </td>
+        <td> Departement </td>
+        <td> Jabatan </td>
+        <td> Gerbang </td>
+    </tr>
+
+    <% @users.each do |user| %>
+    <tr>
+        <td><%= user.name %> </td>
+        <td><%= user.ndk %> </td>
+        <td><%= user.email %> </td>
+        <td><%= user.departement.nama_departement %> </td>
+        <td><%= user.jabatan.nama_jabatan %> </td>
+        <td><%= user.gerbang.nama_gerbang %> </td>
+    </tr>
+    <% end %>
+    
+</table>

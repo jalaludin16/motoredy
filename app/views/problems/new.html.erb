@@ -1,0 +1,26 @@
+<%= link_to 'Home', root_path, class:'btn btn-info' %> </br>
+
+<% if flash[:notice].present? %>
+    <%= flash[:notice] %>
+<% end %>
+
+<%= form_for @problem do |f| %>
+
+    <div class='form-group'>
+        <%= f.label :categori, 'Group Permasalahan'%>
+        <%= f.collection_select :categori_id,  Categori.order(:categori_name), :id, :categori_name,  {include_blank: '-- Pilih Group --'}, {class: 'form-control'} %>
+    </div>
+    
+    <div class='form-group'>
+        <%= f.label :deskripsi, 'Deskripsi Permasalahan'%>
+        <%= f.text_area :deskripsi, rows: 6, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+        <%= f.label :priority, 'Prioritas' %>
+        <%= f.collection_select :priority_id, Priority.order(:prioritas), :id, :prioritas, {include_blank: '-- Pilih Prioritas --'}, {class: 'form-control'} %>
+    </div>
+
+        <%= f.submit "Kirim", class:'btn btn-primary' %> <%= link_to 'Batal', root_path, class: 'btn btn-light' %> 
+
+<% end %>
+

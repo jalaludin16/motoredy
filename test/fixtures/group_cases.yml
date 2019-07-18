@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deskripsi_masalah: MyText
+  categories_id: MyString
+  solusi_masalah: MyText
+  status_masalah: MyString
+  keterangan: MyText
+  user_id: MyString
+  departement_id: MyString
+  gerbang_id: MyString
+
+two:
+  deskripsi_masalah: MyText
+  categories_id: MyString
+  solusi_masalah: MyText
+  status_masalah: MyString
+  keterangan: MyText
+  user_id: MyString
+  departement_id: MyString
+  gerbang_id: MyString

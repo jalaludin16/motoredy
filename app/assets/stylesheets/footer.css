@@ -1,0 +1,16 @@
+footer{
+    color: white;
+  }
+  
+  
+  .footer-bottom{
+    position: absolute;
+    background: linear-gradient(to right bottom, rgb(238, 188, 50),  rgb(250, 126, 25));
+    padding: 3px;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .p {
+    position: center;
+  }

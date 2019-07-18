@@ -1,0 +1,7 @@
+<% if flash[:notice].present? %>
+    <%= flash[:notice] %>
+<% end %>
+
+
+<%= link_to 'Tambah Tiket', new_problem_path, class: 'btn btn-warning' %>
+<%= link_to 'Reporting IT', problems_path, class: 'btn btn-primary' %>
